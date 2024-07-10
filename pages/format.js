@@ -1,53 +1,33 @@
-import CLASSES from "../scripts/classes.json";
-import React from 'react';
 
-const Topic = (props) => {
-
+export default function Format() {
     return (
-        <div className={`p-5 rounded-lg border-solid border-[2.5px] border-black`} >
-            <div className="text-center font-medium"> {props.name} </div>
-            <div className="text-xl text-center">{Array(props.stars).fill('★')}</div>
-            <div className="italic text-sm text-center">Prerequisites: {props.prereqs}</div>
-            {!!props.useful.length && <div className="italic text-xs text-center mt-1">Not Required, but Useful to Know: {props.useful}</div>}
-            <div className="text-sm mt-4">{props.blurb}</div>
-        </div>
-    )
-}
-
-
-export default function Curriculum () {
-
-    const blocks = [];
-    let day = 1; let block = 2;
-    for(let i = 0; i < 9; i++) { blocks.push([day,block]); block++; if(block === 3) { block = 1; day++; } };
-    return (
-        <div className="text-lg">
-            <div className="text-4xl font-bold mb-5">Curriculum</div>
-
+        <div className="flex items-center flex-col">
+            <div id="Format">
+                <div className="text-center font-bold text-3xl m-3">Format</div>
+                <div className="text-center lg:max-w-lg m-3">
+                    25 question multiple choice. 
+                </div>
+                <div className="text-center lg:max-w-lg m-3 mt-10">
+                    All proceeds will go towards supporting the <strong>Paly and Gunn Physics 
+                    Clubs</strong> in the upcoming school year. Registration is on a <strong>first-come first-serve basis.</strong>
+                </div>
+            </div>
+            <br></br>
             <div>
-                PAMS Math Camp offers topics in not only standard math curricula 
-                but also in competition math and higher mathematics. (There will be an 
-                escape room activity on Day 1 Block 1.)
-                {/* <a 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://docs.google.com/spreadsheets/d/1TlXZw7zvU3CRp7NG8a19Xr1EVq0gn03BrEEd_tpTq8Q/edit#gid=737497406"
-                    className="underline"
-                >
-                    here
-                </a>. */}
+                <div id="Schedule" className="text-3xl font-bold mb-5">Schedule</div>
+{/*                
+                <div className="flex flex-col items-center py-32">
+                    <div className="5xl">Schedule</div>
+                    <ScheduleItem start="8:30" end="9:15">Registration</ScheduleItem>
+                    <ScheduleItem start="9:30" end="10:40">Individual Round</ScheduleItem>
+                    <ScheduleItem start="10:40" end="12:00">Team Round</ScheduleItem>
+                    <ScheduleItem start="12:10" end="13:00">Lunch</ScheduleItem>
+                    <ScheduleItem start="13:00" end="14:20">Guts Round</ScheduleItem>
+                    <ScheduleItem start="14:30" end="15:45">Activities / Tiebreaks</ScheduleItem>
+                    <ScheduleItem start="16:00" end="16:30">Awards Ceremony</ScheduleItem>
+                </div>
+    */}
             </div>
-
-            <div className="mb-10">
-                {blocks.map(([day, block]) => <React.Fragment key={`${day}-${block}`}>
-                    <div className="text-2xl font-semibold mb-1 mt-8 mb-2">Day {day} Block {block}</div>
-                    <div className="grid xl:grid-cols-3 gap-5">
-                        {CLASSES[`${day}-${block}`].map((c) => <Topic {...c} key={c.name} />)}
-                    </div>
-                </React.Fragment>)}
-            </div>
-
-            
         </div>
-    )
+    );
 }

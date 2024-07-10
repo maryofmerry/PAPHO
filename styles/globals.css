@@ -28,13 +28,13 @@ a {
   border: 2px solid transparent;
   border-radius: 5px;
   background-color: 108039; /* Adjust as needed */
-  color: #9B111E; /* highlight color */
+  color: #108039; /* highlight color */
   transition: all 0.3s ease;
 }
 
 .nav-box:hover, .nav-box.activeLink {
-  border: 2px solid #9B111E; /* highlight color */
+  border: 2px solid #108039; /* highlight color */
   background-color: #108039; /* Light background color */
-  color: #9B111E; /* highlight color */
+  color: #108039; /* highlight color */
 }
 
