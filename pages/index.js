@@ -4,7 +4,7 @@ import RegisterButton from '../components/reg';
 export default function Home() {
     return (
         <div className="text-lg">
-            <div id="about" className="flex grow">
+            <div id="" className="flex grow">
                 <div>
                     <div className='text-xl'>2025</div>
                     <div className="text-5xl font-bold mb-5">Palo Alto Physics Olypiad</div>

@@ -14,11 +14,13 @@ export default function NavBar () {
                 </a>
             </Link>
 
-            <div className={router.route === "/home" ? 'underline decoration-8 nav-box' : 'nav-box'}>
-                <a href="#sponsors">Sponsors</a>
+            <div className={router.route === "/" ? 'underline decoration-8 nav-box' : 'nav-box'}>
+                <Link href="/#sponsors">
+                    <a>Sponsors</a>
+                </Link>
             </div>
-            
-            <div className={router.route === "/format" ? 'bg-highlight underline decoration-8 nav-box' : 'nav-box'}>
+
+            <div className={router.route === "/format" ? 'border underline decoration-8 nav-box' : 'nav-box'}>
                 <Link href="/format">Format</Link>
             </div>
             
@@ -26,7 +28,7 @@ export default function NavBar () {
                 <Link href="format/#schedule">Schedule</Link>
             </div>
 
-            <div className={router.route === "/about" ? 'bg-highlight underline decoration-8 nav-box' : 'nav-box'}>
+            <div className={router.route === "/about" ? 'border underline decoration-8 nav-box' : 'nav-box'}>
                 <Link href="/about">About us</Link>
             </div>
            
@@ -47,7 +49,7 @@ export default function NavBar () {
                 <a href="#sponsors">Sponsors</a>
             </div>
             
-            <div className={router.route === "/format" ? 'bg-highlight underline decoration-8 nav-box' : 'nav-box'}>
+            <div className={router.route === "/format" ? 'border underline decoration-8 nav-box' : 'nav-box'}>
                 <Link href="/format">Format</Link>
             </div>
             
@@ -55,7 +57,7 @@ export default function NavBar () {
                 <Link href="format/#schedule">Schedule</Link>
             </div>
 
-            <div className={router.route === "/about" ? 'bg-highlight underline decoration-8 nav-box' : 'nav-box'}>
+            <div className={router.route === "/about" ? 'border underline decoration-8 nav-box' : 'nav-box'}>
                 <Link href="/about">About us</Link>
             </div>
            
